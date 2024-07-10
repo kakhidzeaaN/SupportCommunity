@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Topics
+from .models import Topic, Category, User
 # Register your models here.
 
-admin.site.register(Topics)
+admin.site.register(Topic)
+admin.site.register(Category)
+admin.site.register(User)

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg" style="background-color: #dfefee;">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'home' %}">TalkTo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,9 +12,16 @@
          <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
         </li>
+
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'profile' user.id %}">Profile</a>
+          </li>
+        {% endif %}
+
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="d-flex" role="search" action="">
+        <input name="q" class="form-control me-2" type="search" placeholder="Search Topic" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>

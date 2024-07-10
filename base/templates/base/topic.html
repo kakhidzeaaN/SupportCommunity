@@ -1,0 +1,15 @@
+
+<div class="row row-cols-1 row-cols-md-3 g-4" style="margin-left:10%;">
+    {% for topic in topics %}
+    <div class="col">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ topic.name }}</h5>
+                <p class="card-text">{{ topic.content |slice:":200" }}</p>
+                <a href="{{ request.path }}?q={{ topic.description }}" class="btn btn-success">See description</a>
+            </div>
+        </div>
+        <br>
+    </div>
+    {% endfor %}
+</div>
