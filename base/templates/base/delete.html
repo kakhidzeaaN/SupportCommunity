@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block title %} <title>Delete Page</title>{% endblock %}
+
+{% block content %}
+    <h2>Delete Page</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Are You Sure you want to delete "{{ obj }}" group?</p>
+        <input type="submit" value="Delete">
+    </form>
+{% endblock %}

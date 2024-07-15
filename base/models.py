@@ -22,5 +22,13 @@ class Topic(models.Model):
         return f"{self.category} _ {self.name}"
 
 
+# class Menu(models.Model):
+#     topics = models.ForeignKey(Topic, on_delete=models.SET("Topic is undefined"))
+#     articles = models.TextField(max_length=500)
+#     consult = models.TextField(max_length=500)
+#
+
+
+
 class User(AbstractUser):
     topics = models.ManyToManyField(Topic, related_name='topics', blank=True)
