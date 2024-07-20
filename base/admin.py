@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Topic, Category, User
-# Register your models here.
+from .models import Topic, Category, User, Meeting, Conversation
 
 admin.site.register(Topic)
 admin.site.register(Category)
 admin.site.register(User)
+admin.site.register(Meeting)
+admin.site.register(Conversation)

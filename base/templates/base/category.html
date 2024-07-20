@@ -2,12 +2,11 @@
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; font-family: cursive;">
     <h1>{{ heading }}</h1>
 </div>
-<br>
 <div id="carouselExampleDark" class="carousel carousel-dark slide">
     <div class="carousel-inner">
         {% for category in categories %}
         <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
-            <img src="{{ category.picture }}" class="d-block" style="width:100%">
+            <img src="{{ category.picture.url }}" class="d-block" style="width:100%">
             <div class="carousel-caption d-none d-md-block">
                 <h1 style="color: white; text-shadow: 1px 1px 2px black, 10px 10px 35px green; font-family: cursive;">
                     {{ category.heading }}</h1>

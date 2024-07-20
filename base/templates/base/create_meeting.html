@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+
+{% block title %} <title>Create meeting Page HTML</title>{% endblock %}
+
+{% block content %}
+    <h1>Create meeting Page Html</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div>
+            <label for="Meeting_category">Category:</label>
+            <br>
+            <input required type="text" name="category" list="category-list" >
+            <datalist id="category-list">
+                {% for category in categories %}
+                    <select id="meeting_category">
+                        <option value="{{ category.heading }}">{{ category.heading }}</option>
+                    </select>
+                {% endfor %}
+            </datalist>
+        </div>
+
+         <div>
+            <label for="Meeting_conversation">Conversation type:</label>
+            <br>
+            <input required type="text" name="conversation" list="conversation-list" >
+            <datalist id="conversation-list">
+                {% for category in categories %}
+                    <select id="meeting_conversation">
+                        <option value="{{ conversation.type }}">{{ conversation.type }}</option>
+                    </select>
+                {% endfor %}
+            </datalist>
+        </div>
+
+
+        <div>
+            <label>Meeting Title:</label>
+            <br>
+            {{ form.title }}
+            <br>
+            <label>Meeting Type:</label>
+            <br>
+            {{form.conversation}}
+            <br>
+            <label>Meeting Description:</label>
+            <br>
+            {{form.description}}
+        </div>
+        <br>
+        <div>
+            <label>Meeting Agenda:</label>
+            <br>
+            {{form.file}}
+        </div>
+        <br>
+        <input type="submit" value="Upload" >
+    </form>
+
+
+{% endblock %}

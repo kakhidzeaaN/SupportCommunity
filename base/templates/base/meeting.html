@@ -1,0 +1,28 @@
+<style>
+    .row {
+        background-color:pink;
+        padding: 10px;
+    }
+</style>
+<h1>Meeting Page Html</h1>
+<div class="row">
+    {% for meeting in meetings %}
+        <div class="col-sm-4 mb-3 mt-3">
+            <div class="card text-bg-light">
+                <div class="card-body">
+                    <h5 class="card-title">{{ meeting.title }} {{ meeting.created }}</h5>
+                    <h6>{{ meeting.conversation }}</h6>
+                    <p class="card-text">{{ meeting.description |slice:":119" }}</p>
+
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'reading' meeting.id %}" class="btn btn-secondary">Read agenda</a>
+                    <br><br>
+                    {% endif %}
+
+                    <a href="#" class="btn btn-secondary">Enroll</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+

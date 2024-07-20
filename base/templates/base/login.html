@@ -1,6 +1,6 @@
 {% extends 'main.html' %}
 
-{% block title %} <title>Login Page</title>{% endblock %}
+{% block title %} <title>Login Page HTML</title>{% endblock %}
 
 {% block content %}
     <h1>Login Page</h1>
@@ -15,5 +15,9 @@
         <input  type="password" name="password">
         <br>
         <input type="submit" value="Login">
+        <br>
+        <br>
+        <p>Have not signed up yet??</p>
+        <a href="{% url 'register' %}">Sign up</a>
     </form>
 {% endblock %}
