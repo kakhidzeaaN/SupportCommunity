@@ -4,7 +4,7 @@ from .models import Topic, Category, User, Meeting, Conversation
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .forms import MyUserCreationForm, MeetingForm
+from .forms import MyUserCreationForm, MeetingForm, UserForm
 from .seeder import seeder_func
 from django.contrib import messages
 
@@ -122,13 +122,15 @@ def create_meeting(request, meeting_category=None):
         category, created = Category.objects.get_or_create(heading=meeting_category)
         conversation, created = Conversation.objects.get_or_create(type=meeting_conversation)
 
-
         form = MeetingForm(request.POST)
 
         new_meeting = Meeting(description=form.data['description'], conversation=conversation, file=request.FILES['file'], creator=request.user)
 
-        new_meeting.save()
-        new_meeting.category.add(category)
+        if not Meeting.objects.filter(file=request.FILES['file']):
+            new_meeting.save()
+            new_meeting.category.add(category)
+        else:
+            messages.error(request, 'File with same name already exists...')
         return redirect('home')
 
     context = {'form': form, 'category': category, 'conversation': conversation}
@@ -138,3 +140,27 @@ def create_meeting(request, meeting_category=None):
 def reading(request, id):
     meeting = Meeting.objects.get(id=id)
     return render(request, 'base/reading.html', {'meeting': meeting})
+
+
+def delete_meeting(request, id):
+    obj = Meeting.objects.get(id=id)
+
+    if request.method == "POST":
+        obj.file.delete()
+        obj.delete()
+        return redirect('home')
+    return render(request, 'base/delete.html', {'obj': obj})
+
+@login_required(login_url='login')
+def update_user(request):
+    user = request.user
+    form = UserForm(instance=user)
+
+    if request.method == 'POST':
+        form = UserForm(request.POST, request.FILES, instance=user)
+        if form.is_valid():
+            form.save()
+            return redirect('profile', user.id)
+
+    context = {'form': form}
+    return render(request, 'base/update_user.html', context)

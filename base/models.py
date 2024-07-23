@@ -54,3 +54,5 @@ class Meeting(models.Model):
 class User(AbstractUser):
     topics = models.ManyToManyField(Topic, related_name='topics', blank=True)
     meetings = models.ManyToManyField(Meeting, related_name='meetings', blank=True)
+    avatar = models.ImageField(null=True, default='avatar.png')
+    bio = models.TextField(null=True)
