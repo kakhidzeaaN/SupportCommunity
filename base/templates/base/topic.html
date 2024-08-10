@@ -40,7 +40,7 @@
                     <a href="{% url 'create' %}" class="btn btn-secondary">Create meeting</a>
 
                     {% if topic in request.user.topics.all %}
-                    <a href="{% url 'delete' topic.id %}" class="btn btn-outline-light">Drop</a>
+                    <a href="{% url 'drop' topic.id %}" class="btn btn-outline-light">Drop</a>
                     {% else %}
                     <a href="{% url 'add' topic.id %}" class="btn btn-outline-light">Add</a>
                     {% endif %}

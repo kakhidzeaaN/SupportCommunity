@@ -34,8 +34,8 @@ class Conversation(models.Model):
 
 
 class Meeting(models.Model):
-    creator = models.ForeignKey('User', on_delete=models.SET("Unknown Creator"))
-    title = models.CharField(max_length=100)
+    creator = models.ForeignKey('User', on_delete=models.CASCADE)
+    headline = models.CharField(max_length=100)
     conversation = models.ForeignKey(Conversation, on_delete=models.CASCADE)
     description = models.TextField(max_length=300)
     topic = models.ManyToManyField(Topic, related_name='Topic', blank=True)
@@ -45,10 +45,10 @@ class Meeting(models.Model):
     update = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["title", 'created']
+        ordering = ["headline", 'created']
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.headline}"
 
 
 class User(AbstractUser):
@@ -56,3 +56,16 @@ class User(AbstractUser):
     meetings = models.ManyToManyField(Meeting, related_name='meetings', blank=True)
     avatar = models.ImageField(null=True, default='avatar.png')
     bio = models.TextField(null=True)
+
+
+class Comment(models.Model):
+    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    meeting = models.ForeignKey('Meeting', on_delete=models.CASCADE)
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created']
+
+    def __str__(self):
+        return self.body

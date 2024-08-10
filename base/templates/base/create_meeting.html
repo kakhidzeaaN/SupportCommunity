@@ -20,38 +20,26 @@
             </datalist>
         </div>
 
-         <div>
-            <label for="Meeting_conversation">Conversation type:</label>
-            <br>
-            <input required type="text" name="conversation" list="conversation-list" >
-            <datalist id="conversation-list">
-                {% for category in categories %}
-                    <select id="meeting_conversation">
-                        <option value="{{ conversation.type }}">{{ conversation.type }}</option>
-                    </select>
-                {% endfor %}
-            </datalist>
-        </div>
 
 
         <div>
-            <label>Meeting Title:</label>
+            <label>Meeting headline:</label>
             <br>
-            {{ form.title }}
+            {{ form.headline }}
             <br>
             <label>Meeting conditions:</label>
             <br>
-            {{form.conversation}}
+            {{ form.conversation }}
             <br>
             <label>Meeting Description:</label>
             <br>
-            {{form.description}}
+            {{ form.description }}
         </div>
         <br>
         <div>
             <label>Meeting Agenda:</label>
             <br>
-            {{form.file}}
+            {{ form.file }}
         </div>
         <br>
         <input type="submit" value="Upload" >

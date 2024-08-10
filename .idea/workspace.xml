@@ -4,28 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6056ef1-b3ed-45fa-8153-c873afd5ef4d" name="Changes" comment="register, update information, alert messages">
-      <change afterPath="$PROJECT_DIR$/base/migrations/0003_user_avatar_user_bio_alter_meeting_conversation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/base/templates/base/update_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/art1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/avatar.png" afterDir="false" />
+    <list default="true" id="c6056ef1-b3ed-45fa-8153-c873afd5ef4d" name="Changes" comment="update user">
+      <change afterPath="$PROJECT_DIR$/base/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/migrations/0004_comment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/migrations/0005_alter_meeting_options_rename_meeting_comment_meeting_and_more.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/base/migrations/0006_alter_meeting_headline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/AvatarK.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/AvatarK_eW2mFWP.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/aaad.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/aaad_a4SRH3V.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/addic_LeAxb7d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/addic_WojHRqW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/addic_tDQyEvw.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/anonimous_alcoholics.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/art1_LCxhM06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/deppr_LXDLiGW.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/fathe_mYjspRC.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/fraud_gp1BIaK.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/images.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/loose_8TnxRvc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/mom_aHZ67XS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/moo_jKPBWN3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/par_ZvVYMtK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/pre.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/sleep_ily3QE5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/sui.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/suic.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/suici.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/suici_MEX94YV.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/the_art_of_loving.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/vet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/veteran.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anweb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/anweb/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anweb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/anweb/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/create_meeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/create_meeting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/meeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/meeting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/templates/base/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/templates/base/reading.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/reading.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/topic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/PyCharm_ReferenceCard_mac.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/PyCharm_ReferenceCard_mac_ut1UgQx.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/meeting_agenda_6nGgV3C.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/meeting_agenda_WvyF3Bg.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/კოდინგის_სკოლა_1500_ქალისთვის_-_ბენეფიციარის_ხელშეკრულება.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +59,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -147,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721483735284</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update user">
+      <option name="closed" value="true" />
+      <created>1721721337181</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721721337181</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +199,8 @@
     <MESSAGE value="search, superuser, tables, css styling" />
     <MESSAGE value="login, logout, add/delete buttons" />
     <MESSAGE value="register, update information, alert messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="register, update information, alert messages" />
+    <MESSAGE value="update user" />
+    <option name="LAST_COMMIT_MESSAGE" value="update user" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Topic, Category, User, Meeting, Conversation
+from .models import Topic, Category, User, Meeting, Conversation, Comment
 from django.db.models import Q
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -139,7 +139,15 @@ def create_meeting(request, meeting_category=None):
 
 def reading(request, id):
     meeting = Meeting.objects.get(id=id)
-    return render(request, 'base/reading.html', {'meeting': meeting})
+    meeting_comments = meeting.comment_set.all()  # .order_by('-created')
+    if request.method == "POST":
+        Comment.objects.create(
+            user=request.user,
+            meeting=meeting,
+            body=request.POST.get('body')
+        )
+
+    return render(request, 'base/reading.html', {'meeting': meeting, 'comments': meeting_comments})
 
 
 def delete_meeting(request, id):
@@ -164,3 +172,13 @@ def update_user(request):
 
     context = {'form': form}
     return render(request, 'base/update_user.html', context)
+
+
+def delete_comment(request, id):
+    comment = Comment.objects.get(id=id)
+    meeting = comment.meeting
+    if request.method == 'POST':
+        comment.delete()
+        return redirect('reading', meeting.id)
+
+    return render(request, 'base/delete.html', {'obj': comment})
