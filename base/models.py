@@ -17,7 +17,7 @@ class Topic(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(max_length=500)
     content = models.CharField(max_length=200)
-    category = models.ForeignKey(Category, on_delete=models.SET("Category is undefined"))
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['name']
@@ -48,7 +48,7 @@ class Meeting(models.Model):
         ordering = ["headline", 'created']
 
     def __str__(self):
-        return f"{self.headline}"
+        return self.headline
 
 
 class User(AbstractUser):

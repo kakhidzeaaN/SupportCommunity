@@ -1,29 +1,117 @@
-<style>
-    .row {
-        background-color:pink;
-        padding: 10px;
-    }
-</style>
-<h1>Meeting Page Html</h1>
-<div class="row">
-    {% for meeting in meetings %}
-        <div class="col-sm-4 mb-3 mt-3">
-            <div class="card text-bg-light">
-                <div class="card-body">
-                    <h5 class="card-title">{{ meeting.headline }}</h5>
-                    <h6>{{ meeting.created }}</h6>
-                    <p class="card-text">{{ meeting.description |slice:":120" }}</p>
 
-                    {% if request.user.is_authenticated %}
-                    <a href="{% url 'reading' meeting.id %}" class="btn btn-secondary">Read agenda</a>
-                    <br><br>
-                    {% endif %}
-                    {% if request.user == meeting.creator %}
-                        <a href="{% url 'delete' meeting.id %}" class="btn btn-secondary">Delete</a>
-                    {% endif %}
+<style>
+    .meeting-container {
+        margin-top: 20px; /* Space above the container */
+        margin-left: 300px;
+    }
+     /* Custom Card Container */
+        .custom-card-container {
+        margin-bottom: 30px; /* Adds space between rows */
+    }
+    /* Custom Card Width */
+        .custom-card {
+        max-width: 90%; /* Adjusts the width of the card */
+        margin: 0 auto; /* Centers the card */
+        margin-left: 25px; /* Adds space between columns */
+        margin-right: 55px; /* Adds space between columns */
+    }
+    ./* Card Styles */
+        .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        border-radius: 12px; /* Rounded corners for cards */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    }
+    /* Headline Styles */
+        .card-title {
+        font-size: 1.5rem; /* Increases headline size */
+        font-weight: bold; /* Makes the headline bold */
+        margin-bottom: 10px; /* Space below the headline */
+        position: relative;
+        padding-bottom: 10px; /* Adds padding for the underline */
+    }
+
+    .card-title::after {
+    content: "";
+    display: block;
+    width: 100%; /* Line spans the full width of the card */
+    height: 3px; /* Line height */
+    background-color: #dcdcdc; /* Grey color for the line */
+    margin-top: 10px;
+    margin-bottom: 15px; /* Space below the line */
+}
+
+    /* Description Text Styles */
+        .card-text {
+        font-size: 1rem; /* Adjusts font size */
+        color: #555; /* Softer text color for the description */
+        line-height: 1.6; /* Improves readability */
+        margin-bottom: 20px; /* Space below the description */
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background-color: #F8F8FF;
+    }
+
+    /* Buttons */
+    /* Button Container */
+    .mt-auto {
+        margin-top: auto;
+    }
+
+    /* Aligning buttons next to each other */
+    .mt-auto .d-flex {
+        gap: 10px; /* Adds space between the buttons */
+    }
+    .btn {
+        border-radius: 4px; /* Rounded corners for buttons */
+        padding: 4px 8px; /* Padding inside the button */
+        margin-bottom: 10px;
+    }
+
+
+    .btn-success:hover {
+        background-color: #0056b3; /* Darker color on hover */
+    }
+
+    .btn-secondary:hover {
+        background-color: #c82333; /* Darker color on hover */
+    }
+
+
+</style>
+
+<div class="container meeting-container mt-4">
+    <h2 class="mb-4">Meetings</h2>
+    <div class="row">
+        {% for meeting in meetings %}
+            <div class="col-md-5 d-flex align-items-stretch mb-4 custom-card-container">
+                <div class="card mb-4 shadow-sm shadow-sm custom-card">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">{{ meeting.headline }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ meeting.type }}</h6>
+                        <p class="card-text">{{ meeting.description |slice:":120" }}</p>
+                        <div class="mt-auto d-flex justify-content-between">
+                            {% if request.user.is_authenticated %}
+                                <div class="mt-auto">
+                                    <a href="{% url 'reading' meeting.id %}" class="btn btn-success">Read agenda</a>
+                                </div>
+                            {% endif %}
+                            {% if request.user == meeting.creator %}
+                                <div class="mt-auto">
+                                    <a href="{% url 'delete' meeting.id %}" class="btn btn-secondary">Delete</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
-

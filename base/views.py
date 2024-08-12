@@ -28,7 +28,8 @@ def home(request):
 def about(request):
     categories = Category.objects.all()
     meetings = Meeting.objects.all()
-    context = {"categories": categories, 'meetings': meetings}
+    conversation = Conversation.objects.all()
+    context = {"categories": categories, 'meetings': meetings, 'conversation': conversation}
     return render(request, 'base/about.html', context)
 
 
@@ -113,6 +114,7 @@ def register_user(request):
 def create_meeting(request, meeting_category=None):
     category = Category.objects.all()
     conversation = Conversation.objects.all()
+    meeting = Meeting.objects.all()
     form = MeetingForm
 
     if request.method == 'POST':
@@ -133,7 +135,7 @@ def create_meeting(request, meeting_category=None):
             messages.error(request, 'File with same name already exists...')
         return redirect('home')
 
-    context = {'form': form, 'category': category, 'conversation': conversation}
+    context = {'form': form, 'category': category, 'conversation': conversation, 'meeting': meeting}
     return render(request, 'base/create_meeting.html', context)
 
 

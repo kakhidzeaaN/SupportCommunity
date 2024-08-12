@@ -3,10 +3,26 @@
 {% block title %} <title>Profile Page</title>{% endblock %}
 
 {% block content %}
-    <div style="margin:10px;">
-        <a class="btn btn-outline-success" href="{% url 'update_user' %}" role="button">Update User</a>
-    </div>
-    <br>
-    {% include 'base/topic.html' %}
+<style>
+    body.profile-page #category-list {
+    visibility: hidden; /* Keeps the space occupied by the category list */
+    height: 0; /* or set a fixed height to reserve the space */
+    margin: 0;
+    padding: 0;
+}
+.main-content {
+    min-height: calc(100vh - 250px); /* Adjust 150px based on your footer height */
+    /* Alternatively, you can use a specific height in pixels */
+}
 
+</style>
+    <body class="profile-page">
+    <div class="main-content">
+            <div style="margin:10px;">
+                <a class="btn btn-outline-success" href="{% url 'update_user' %}" role="button">Update User</a>
+            </div>
+            <br>
+            {% include 'base/topic.html' %}
+    </div>
+    </body>
 {% endblock %}

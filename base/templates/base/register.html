@@ -3,15 +3,109 @@
 {% block title %} <title>Register Page HTML</title>{% endblock %}
 
 {% block content %}
-    <h1>Register Page Html</h1>
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{ form }}
-        <br>
-        <input type="submit" value="Sign up">
+<style>
+/* Center the register container and add some space at the top */
+.register-container {
+    margin-top: 50px;
+}
 
-        <br><br>
-        <p>Are You Already Registered?</p>
-        <a href="{% url 'login' %}">Login</a>
-    </form>
+/* Card Styles */
+.card {
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels and Fields */
+.form-group label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Help Text (Validation Information) */
+.form-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: block;
+    line-height: 1.5;
+}
+
+/* Sign Up Button */
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+/* Login Link */
+a.text-decoration-none {
+    color: #007bff;
+    font-weight: 500;
+}
+
+a.text-decoration-none:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Additional Spacing for Bottom Links */
+.text-center.mt-3 {
+    margin-top: 15px;
+}
+</style>
+
+<div class="container register-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-4">
+                <h3 class="text-center mb-4">Create an Account</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        {{ form.username.label_tag }}
+                        {{ form.username }}
+                        <small class="form-text text-muted">{{ form.username.help_text }}</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form.password1.label_tag }}
+                        {{ form.password1 }}
+                        <small class="form-text text-muted">{{ form.password1.help_text }}</small>
+                    </div>
+                    <div class="form-group mb-3">
+                        {{ form.password2.label_tag }}
+                        {{ form.password2 }}
+                        <small class="form-text text-muted">{{ form.password2.help_text }}</small>
+                    </div>
+                    <div class="d-grid mt-4 mb-3">
+                        <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+                    </div>
+                    <p class="text-center mt-3">Are You Already Registered? <a href="{% url 'login' %}" class="text-decoration-none">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
