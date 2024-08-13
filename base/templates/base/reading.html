@@ -1,7 +1,10 @@
 {% extends 'main.html' %}
 
 {% block title %} <title>Reading Page</title>{% endblock %}
-
+{% load static %}
+{% block static %}
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 {% block content %}
 <style>
     /* Custom CSS for the agenda and comments page */

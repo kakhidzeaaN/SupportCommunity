@@ -1,12 +1,16 @@
 {% extends 'main.html' %}
 
 {% block title %} <title>Update Profile</title>{% endblock %}
-
+{% load static %}
+{% block static %}
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 {% block content %}
 <style>
     .update-user-container {
-    width: 600px; /* Adjust width as needed */
+    width: 500px; /* Adjust width as needed */
     margin-top: 20px; /* Space above the form */
+    margin-bottom: 20px;
     padding: 20px; /* Padding inside the container */
     background-color: #B0E0E6; /* Background color of the form */
     border-radius: 8px; /* Rounded corners */
@@ -25,7 +29,8 @@
     /* Form Control */
     .form-control{
         border-radius: 4px; /* Rounded corners for input fields */
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075); /* Inner shadow for better appearance */
+        background-color: #FFFAFA; /* Background color of the form */
+
     }
     /* Buttons */
     .btn {
@@ -36,6 +41,7 @@
     .btn-primary {
         background-color: #007bff; /* Primary button color */
         border: none; /* Remove default border */
+        margin-top:10px;
     }
 
     .btn-primary:hover {
@@ -45,6 +51,7 @@
     .btn-secondary {
         background-color: #6c757d; /* Secondary button color */
         border: none; /* Remove default border */
+        margin-bottom:10px;
     }
 
     .btn-secondary:hover {
@@ -57,7 +64,9 @@
         <form method="post" action="" enctype="multipart/form-data">
             {% csrf_token %}
             {% for field in form %}
+                    <div style="font-weigh:bold;">
                         {{ field.label }}
+                    </div>
                     <div class="form-control">
                         {{ field }}
                     </div>

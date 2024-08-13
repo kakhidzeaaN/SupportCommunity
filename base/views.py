@@ -126,7 +126,7 @@ def create_meeting(request, meeting_category=None):
 
         form = MeetingForm(request.POST)
 
-        new_meeting = Meeting(description=form.data['description'], conversation=conversation, file=request.FILES['file'], creator=request.user)
+        new_meeting = Meeting(headline=form.data['headline'], description=form.data['description'], conversation=conversation, file=request.FILES['file'], creator=request.user)
 
         if not Meeting.objects.filter(file=request.FILES['file']):
             new_meeting.save()
@@ -184,3 +184,5 @@ def delete_comment(request, id):
         return redirect('reading', meeting.id)
 
     return render(request, 'base/delete.html', {'obj': comment})
+
+

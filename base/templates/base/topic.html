@@ -1,3 +1,7 @@
+{% load static %}
+{% block static %}
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 <style>
     /* Sticky Category List */
     .home-container {
@@ -29,7 +33,10 @@
 
 
 /* Card Titles */
-.card-title {
+    .card-title {
+        color: white;
+    }
+    .card-text {
     color: white;
 }
 </style>

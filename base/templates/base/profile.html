@@ -1,7 +1,10 @@
 {% extends 'main.html' %}
 
 {% block title %} <title>Profile Page</title>{% endblock %}
-
+{% load static %}
+{% block static %}
+<link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 {% block content %}
 <style>
     body.profile-page #category-list {
@@ -16,13 +19,14 @@
 }
 
 </style>
-    <body class="profile-page">
+<body class="profile-page">
     <div class="main-content">
-            <div style="margin:10px;">
-                <a class="btn btn-outline-success" href="{% url 'update_user' %}" role="button">Update User</a>
-            </div>
-            <br>
-            {% include 'base/topic.html' %}
+        <div style="margin:10px;">
+            <a class="btn btn-outline-success" href="{% url 'update_user' %}" role="button">Update User</a>
+        </div>
+        <br>
+        {% include 'base/topic.html' %}
     </div>
-    </body>
+
+</body>
 {% endblock %}

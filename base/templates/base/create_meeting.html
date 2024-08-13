@@ -1,49 +1,87 @@
 {% extends 'main.html' %}
 
 {% block title %} <title>Create meeting Page HTML</title>{% endblock %}
-
+{% load static %}
+{% block static %}
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 {% block content %}
-    <h1>Create meeting Page Html</h1>
-    <form method="POST" action="" enctype="multipart/form-data">
-        {% csrf_token %}
+<style>
+    .form-label {
+    display: block;
+    margin-bottom: .5rem;
+}
 
-        <div>
-            <label for="Meeting_category">Category:</label>
-            <br>
-            <input required type="text" name="category" list="category-list" >
-            <datalist id="category-list">
-                {% for category in categories %}
-                    <select id="meeting_category">
-                        <option value="{{ category.heading }}">{{ category.heading }}</option>
-                    </select>
-                {% endfor %}
-            </datalist>
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+</style>
+
+    <div class="container mt-5 mb-5" style="min-height: 80vh;">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm" style="background-color: #eafaf1; border: none;">
+                    <div class="card-header text-white" style="background-color: #4CAF50;">
+                        <h4 class="mb-0">Create a New Meeting</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="Meeting_category" class="form-label">Category:</label>
+                                <input required type="text" name="category" list="category-list" class="form-control" id="Meeting_category">
+                                <datalist id="category-list">
+                                    {% for category in categories %}
+                                        <option value="{{ category.heading }}">{{ category.heading }}</option>
+                                    {% endfor %}
+                                </datalist>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Meeting Headline:</label>
+                                {{ form.headline }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Meeting Conditions:</label>
+                                {{ form.conversation }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Meeting Description:</label>
+                                {{ form.description }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label  class="form-label">Meeting Agenda:</label>
+                                {{ form.file }}
+                            </div>
+
+                            <div class="text-center">
+                                <input type="submit" value="Upload" class="btn text-white" style="background-color: #4CAF50;">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
 
 
-        <div>
-            <label>Meeting headline:</label>
-            <br>
-            {{ form.headline }}
-            <br>
-            <label>Meeting conditions:</label>
-            <br>
-            {{ form.conversation }}
-            <br>
-            <label>Meeting Description:</label>
-            <br>
-            {{ form.description }}
-        </div>
-        <br>
-        <div>
-            <label>Meeting Agenda:</label>
-            <br>
-            {{ form.file }}
-        </div>
-        <br>
-        <input type="submit" value="Upload" >
-    </form>
+
+
+
 
 
 {% endblock %}

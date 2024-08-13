@@ -1,4 +1,7 @@
-
+{% load static %}
+{% block static %}
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 <style>
     .meeting-container {
         margin-top: 20px; /* Space above the container */
@@ -69,26 +72,11 @@
     .mt-auto .d-flex {
         gap: 10px; /* Adds space between the buttons */
     }
-    .btn {
-        border-radius: 4px; /* Rounded corners for buttons */
-        padding: 4px 8px; /* Padding inside the button */
-        margin-bottom: 10px;
-    }
-
-
-    .btn-success:hover {
-        background-color: #0056b3; /* Darker color on hover */
-    }
-
-    .btn-secondary:hover {
-        background-color: #c82333; /* Darker color on hover */
-    }
-
 
 </style>
 
 <div class="container meeting-container mt-4">
-    <h2 class="mb-4">Meetings</h2>
+    <h2 class="mb-5" style="letter-spacing: 5px; font-family: cursive; margin-left:20px;  color:gray; font-weigh:bold;">Meetings Created By Verified Users:</h2>
     <div class="row">
         {% for meeting in meetings %}
             <div class="col-md-5 d-flex align-items-stretch mb-4 custom-card-container">

@@ -4,34 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6056ef1-b3ed-45fa-8153-c873afd5ef4d" name="Changes" comment="comments">
-      <change afterPath="$PROJECT_DIR$/static/files/Stand-Up-Meeting-Agenda_ivGCmI4.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/aav.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/ava.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/care.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/dep.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/icons/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/files/slee.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/aav.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/ava.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/car1.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/car2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/car3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/care.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/dep.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/pre.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/slee.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/suic.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/images/vet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carousel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+    <list default="true" id="c6056ef1-b3ed-45fa-8153-c873afd5ef4d" name="Changes" comment="design">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/aav_yUbuq6R.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/care_VBatWsq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/files/moo_pwwDuTw.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/templates/base/category.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/templates/base/create_meeting.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/create_meeting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/login.html" afterDir="false" />
@@ -41,42 +21,12 @@
       <change beforePath="$PROJECT_DIR$/base/templates/base/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/topic.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/topic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/templates/base/update_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/base/templates/base/update_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/AvatarK_eW2mFWP.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/StopParentingAlone_Logo_Color_HiRes_REGISTERED.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/aaad_a4SRH3V.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/aaad.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/addic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/addic_LeAxb7d.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/addic_WojHRqW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/addic_tDQyEvw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/art1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/art1_LCxhM06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/avatar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/deppr.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/deppr_LXDLiGW.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/fathe_mYjspRC.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/fathe.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/fraud_gp1BIaK.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/fraud.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/grief.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/grief_PfgAj3m.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/ill.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/ill.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/loose.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/files/lost.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/loose_8TnxRvc.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/lost.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/mom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/mom_aHZ67XS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/moo_jKPBWN3.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/moo.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/par_ZvVYMtK.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/par.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/sleep.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/sleep_ily3QE5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/sui.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/suici.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/suici.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/suici_MEX94YV.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/files/veteran.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/files/Stand-Up-Meeting-Agenda_ivGCmI4.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723288174906</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="design">
+      <option name="closed" value="true" />
+      <created>1723470715475</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723470715475</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,7 +204,8 @@
     <MESSAGE value="register, update information, alert messages" />
     <MESSAGE value="update user" />
     <MESSAGE value="comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="comments" />
+    <MESSAGE value="design" />
+    <option name="LAST_COMMIT_MESSAGE" value="design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

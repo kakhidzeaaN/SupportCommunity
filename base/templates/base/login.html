@@ -1,7 +1,10 @@
 {% extends 'main.html' %}
 
 {% block title %} <title>Login Page HTML</title>{% endblock %}
-
+{% load static %}
+{% block static %}
+        <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+{% endblock %}
 {% block content %}
 <style>
     /* Center the login container and add some space at the top */
@@ -44,7 +47,7 @@
     border-color: #0056b3;
 }
 </style>
-<div class="container login-container">
+<div class="container login-container" style="min-height: calc(100vh - 350px)">
     <div class="row justify-content-center">
         <div class="col-md-6 col-lg-4">
             <div class="card shadow-lg p-4">
